@@ -1,0 +1,64 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   EnumInstanceV2.java
+
+package main.java.creation.singleton;
+
+import java.io.PrintStream;
+
+public abstract class EnumInstanceV2 extends Enum
+{
+
+    public static EnumInstanceV2[] values()
+    {
+        return (EnumInstanceV2[])$VALUES.clone();
+    }
+
+    public static EnumInstanceV2 valueOf(String name)
+    {
+        return (EnumInstanceV2)Enum.valueOf(main/java/singleton/EnumInstanceV2, name);
+    }
+
+    private EnumInstanceV2(String s, int i)
+    {
+        super(s, i);
+    }
+
+    protected abstract void printTest();
+
+    public Object getData()
+    {
+        return data;
+    }
+
+    public void setData(Object data)
+    {
+        this.data = data;
+    }
+
+    public static EnumInstanceV2 getInstance()
+    {
+        return INSTANCE;
+    }
+
+    public static final EnumInstanceV2 INSTANCE;
+    private Object data;
+    private static final EnumInstanceV2 $VALUES[];
+
+    static 
+    {
+        INSTANCE = new EnumInstanceV2("INSTANCE", 0) {
+
+            protected void printTest()
+            {
+                System.out.println("hello world");
+            }
+
+        }
+;
+        $VALUES = (new EnumInstanceV2[] {
+            INSTANCE
+        });
+    }
+}
