@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface Employee {
+    + report()
+}
+class Manager {
+    - department: String
+    - reportContent: String
+    + report(): void
+}
+class EmployeeFactory {
+    - EMPLOYEE_MAP
+    + getEmployee(String department)
+}
+
+Employee <|-- Manager
+EmployeeFactory *--> Employee
+
+@enduml
