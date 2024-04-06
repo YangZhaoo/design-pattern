@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class Image {
+    + add(Image)
+    + remove(index)
+    + getName(): String
+    + getSize(): int
+    + getCount(): int
+}
+class Photo {
+    - name: String
+    - size: int
+    getName(): String
+}
+class Album {
+    - name: String
+    - list: List<Image>
+    getName(): String
+}
+
+Image <|-- Photo
+Image <|-- Album
+Image <--* Album
+
+@enduml
