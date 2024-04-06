@@ -1,0 +1,42 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract AOrder
+abstract Adecorator
+class MacProtectiveCase
+class AppleCarePlus
+
+AOrder <|-- AppleMac
+AOrder <|-- Adecorator
+
+Adecorator <|-- MacProtectiveCase
+Adecorator <|-- AppleCarePlus
+
+class AOrder {
+    # getCost() : int
+    # getDescription() : String
+}
+
+class AppleMac {
+    # getCost() : int
+    # getDescription() : String
+}
+class Adecorator {
+    - AOrder order
+    # getCost() : int
+    # getDescription() : String
+}
+
+class MacProtectiveCase {
+  + MacProtectiveCase(AOrder)
+  + getCost() : double
+  + getDescription() : String
+}
+
+class AppleCarePlus {
+  + AppleCarePlus(AOrder)
+  + getCost() : double
+  + getDescription() : String
+}
+
+@enduml
