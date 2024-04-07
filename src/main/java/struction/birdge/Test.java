@@ -8,6 +8,7 @@ import java.util.Properties;
  * {@link java.sql.Driver#connect(String, Properties)}
  * 抽象部分时DriverManager，实现部分的接口是Driver，具体实现交由各个数据库厂商。
  * DriverManager将getConnection的实现委托给具体的实现。
+ * 很好的实现开闭原则
  */
 public class Test {
 
