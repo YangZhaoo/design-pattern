@@ -1,4 +1,6 @@
-package main.java.struction.birdge;
+package main.java.struction.birdge.bank;
+
+import main.java.struction.birdge.account.Account;
 
 public abstract class Bank {
     protected Account account;

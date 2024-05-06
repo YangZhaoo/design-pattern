@@ -1,5 +1,12 @@
 package main.java.struction.birdge;
 
+import main.java.struction.birdge.account.Account;
+import main.java.struction.birdge.account.DepositAccount;
+import main.java.struction.birdge.account.SavingAccount;
+import main.java.struction.birdge.bank.ABCBank;
+import main.java.struction.birdge.bank.Bank;
+import main.java.struction.birdge.bank.ICBCBank;
+
 import java.util.Properties;
 
 /**

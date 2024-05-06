@@ -1,4 +1,4 @@
-package main.java.struction.birdge;
+package main.java.struction.birdge.account;
 
 public class DepositAccount implements Account {
     @Override

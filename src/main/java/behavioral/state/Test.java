@@ -9,7 +9,7 @@ package main.java.behavioral.state;
 public class Test {
     public static void main(String[] args) {
         CourseVideoContext courseVideoContext = new CourseVideoContext();
-        courseVideoContext.setCourseVideoState(new PlayState());
+        courseVideoContext.setCourseVideoState(CourseVideoContext.PLAY_STATE);
         courseVideoContext.play();
         System.out.println("当前的状态: " + courseVideoContext.getCourseVideoState().getClass().getSimpleName());
         courseVideoContext.pause();
