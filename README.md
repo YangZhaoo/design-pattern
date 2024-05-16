@@ -25,14 +25,14 @@
 - 尽量使用合成/聚合的方式，而不是使用继承来达到软件复用的目的
 # 设计模式
 ## 创建型
-### 工厂模式
+### [工厂模式](src%2Fmain%2Fjava%2Fcreation%2Ffactory)
 - 简单工厂不属于23种标准的设计模式中的一种，通过传递type，创建对应的对象。
 - 工厂方法将对象的创建推迟到子类，不同的子类负责创建不同类型的对象。抽象方法：创建同一产品等级的对象。[工厂方法代码示例](src/main/java/creation/factory/factoryMethod)
 - 抽象工厂提供 创建一系列相关或相互依赖的对象 的接口。[抽象工厂代码示例](src/main/java/creation/factory/abstraceFactory)
-### 建造者模式
+### [建造者模式](src%2Fmain%2Fjava%2Fcreation%2Fbuilder)
 - 将复杂对象的创建和表示相分离，使得同样的构建过程可以创建不同的表示。
 - 适用于非常复杂的内部结构（有很多属性）、想把创建和使用分离。[建造者模式代码示例](src/main/java/creation/builder)
-### 单例模式
+### [单例模式](src%2Fmain%2Fjava%2Fcreation%2Fsingleton)
 - 确保某一个类只有一个实例，并提供一个访问它的全局访问点。
 - 常用于配置、数据库连接池、缓存等。
 - 重点：私有构造、线程安全、延迟加载、序列化与反序列化的安全、需要考虑反射攻击
@@ -51,7 +51,7 @@
 #### 对单例模式的攻击手段
 1. 序列化后通过反序列化手段反复创建。可以通过在反序列化过程中，重写readResolve方法返回单例对象来避免。
 2. 通过反射手段重复创建对象。可以通过在构造器中判断是否已经创建对象，如果是则抛出异常，此方法仅对饿汉式有效。
-### 原型模式
+### [原型模式](src%2Fmain%2Fjava%2Fcreation%2Fprototype)
 - 通过拷贝原型对象创建新对象
 - 比new方式性能更高
 - 需要实现Cloneable接口，重写clone方法。[原型模型代码示例](src%2Fmain%2Fjava%2Fcreation%2Fprototype)
